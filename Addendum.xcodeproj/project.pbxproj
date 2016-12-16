@@ -22,6 +22,7 @@
 		A128E4DE1E03519300993ACB /* Linter.m in Sources */ = {isa = PBXBuildFile; fileRef = A128E4BF1E034DDB00993ACB /* Linter.m */; };
 		A128E4DF1E03519900993ACB /* LinterPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = A128E4C11E034DDB00993ACB /* LinterPlugin.m */; };
 		A128E4E01E0358FD00993ACB /* Addendum.framework in Resources */ = {isa = PBXBuildFile; fileRef = A128E4B11E034D8600993ACB /* Addendum.framework */; };
+		A128E4E21E03675A00993ACB /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = A128E4E11E03675A00993ACB /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		A128E4D21E034E0900993ACB /* CodaFoodcritic.codaplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodaFoodcritic.codaplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		A128E4D41E034E0900993ACB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A128E4D81E034F6A00993ACB /* CodaFoodcritic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodaFoodcritic.m; sourceTree = "<group>"; };
+		A128E4E11E03675A00993ACB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			children = (
 				A128E4D41E034E0900993ACB /* Info.plist */,
 				A128E4D81E034F6A00993ACB /* CodaFoodcritic.m */,
+				A128E4E11E03675A00993ACB /* README.md */,
 			);
 			path = CodaFoodcritic;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			files = (
 				A128E4D91E034F6A00993ACB /* CodaFoodcritic.m in Sources */,
 				A128E4DE1E03519300993ACB /* Linter.m in Sources */,
+				A128E4E21E03675A00993ACB /* README.md in Sources */,
 				A128E4DF1E03519900993ACB /* LinterPlugin.m in Sources */,
 				A128E4DD1E03517A00993ACB /* Runner.m in Sources */,
 			);

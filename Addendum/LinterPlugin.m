@@ -88,8 +88,12 @@
     validator.linterArguments = self.linterArguments;
     validator.delegate = aDelegate;
     validator.parser = self;
-    
-    validator.filePath = [self temporaryFileWithContents:text];
+
+    if (self.controller.focusedTextView.path != nil) {
+        validator.filePath = self.controller.focusedTextView.path;
+    } else {
+        validator.filePath = [self temporaryFileWithContents:text];
+    }
     return validator;
 }
 

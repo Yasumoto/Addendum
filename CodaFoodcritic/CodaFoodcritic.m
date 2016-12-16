@@ -30,25 +30,27 @@
 }
 
 - (NSString *)name {
-    return @"CodaFoodcritic";
+    return @"Chef";
 }
 
 - (NSArray *) parseLintErrors:(NSString *)output {
-    NSLog(@"Being called");
+    output = [output stringByTrimmingCharactersInSet:
+              [NSCharacterSet whitespaceCharacterSet]];
     NSArray *lines = [output componentsSeparatedByString:@"\n"];
     NSMutableArray *results = [[NSMutableArray alloc] initWithCapacity:lines.count];
 
     for (NSString *check in lines) {
         NSArray *entry = [check componentsSeparatedByString:@":"];
         NSString *error = kValidatorTypeWarning;
-
-        NSDictionary *lintedError = @{kValidatorMessageStringKey: entry[0],
-                                      kValidatorExplanationStringKey: entry[1],
-                                      kValidatorColumnKey: @0,
-                                      kValidatorLineKey: entry[3],
-                                      kValidatorErrorTypeKey: error};
-        [results addObject:lintedError];
-        
+        if (entry.count == 4) {
+            NSDictionary *lintedError = @{kValidatorMessageStringKey: entry[0],
+                                          kValidatorExplanationStringKey: [entry[1] stringByTrimmingCharactersInSet:
+                                                                           [NSCharacterSet whitespaceCharacterSet]],
+                                          kValidatorColumnKey: @0,
+                                          kValidatorLineKey: [NSNumber numberWithInteger:[entry[3] integerValue]],
+                                          kValidatorErrorTypeKey: error};
+            [results addObject:lintedError];
+        }
     }
     return results;
 }

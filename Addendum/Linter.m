@@ -26,7 +26,7 @@
 @synthesize linterArguments = _linterArguments;
 @synthesize linterCwd = _linterCwd;
 
-NSString *errorDomain = @"com.bjoli.CodaLintBackend.ErrorDomainLinter";
+NSString *errorDomain = @"com.bjoli.Addendum.ErrorDomainLinter";
 
 /**
  Starts validation.
@@ -50,16 +50,6 @@ NSString *errorDomain = @"com.bjoli.CodaLintBackend.ErrorDomainLinter";
 - (void)cancel {
     [self.runner cancel];
 }
-
-
-/**
- Returns a human-readable name of the syntax being validated.
- */
-
-- (NSString*)name {
-    return @"CodaLintBackend";
-}
-
 
 /**
  Sets the validator delegate.
